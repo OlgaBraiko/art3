@@ -1,1 +1,5 @@
-console.log('Hello World!');
+import modals from "../../ts/modal";
+
+window.addEventListener("DOMContentLoaded", () => {
+  modals();
+});
