@@ -1,4 +1,5 @@
 import slides from "../../ts/sliders";
+import form from "../../ts/forms";
 
 window.addEventListener("DOMContentLoaded", () => {
   slides(
@@ -8,4 +9,5 @@ window.addEventListener("DOMContentLoaded", () => {
     ".main-next-btn"
   );
   slides(".main-slider-item", "vertical");
+  form();
 });
