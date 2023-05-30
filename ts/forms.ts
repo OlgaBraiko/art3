@@ -1,43 +1,22 @@
 const form = () => {
-  const forms = document.querySelectorAll("form");
-  const inputs = document.querySelectorAll("input");
+  const forms:NodeListOf<HTMLElement> = document.querySelectorAll("form");
+  const inputs:NodeListOf<HTMLElement> = document.querySelectorAll("input");
 
-  const message = {
+  const message:{loading:string,
+    success:string,
+    failure:string,
+    spiner:string,
+    ok:string,
+    fail:string} = {
     loading: "Загрузка...",
     success: "Спасибо! Мы скоро с вами свяжемся",
     failure: "Что-то пошло не так...",
-   spiner:'',
-    ok:,
-    fail:
+  spiner:'image/unknown-1.png',
+   ok:'image/unknown.jpeg',
+fail:'image/unknown.png'  
   };
 
-  //const path={
-    //designer:,
-   // question: //путь
-    
-  //}
-
-  const postData = async ('https://simple-server-cumz.onrender.com/api/data', data) => {
- 
-    console.log(data:Date);
-    const result = await fetch('https://simple-server-cumz.onrender.com/api/data', {
-      method: "POST",
-      headers: {
-        "Content-type": "aplication/json",
-      },
-      body: data,
-    });
-
-    return await result.text();
-  };
-
-  const clearInputs = () => {
-    inputs.forEach((input) => {
-      input.value = "";
-    });
-  };
-
-  forms.forEach((form) => {
+  forms.forEach((form)  => {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
 
@@ -60,14 +39,12 @@ const form = () => {
       statusMesage.appendChild(statusImg)
 
       const formData = new FormData(form);
-      const api;
+      let api:string ;
  
       form.closest('.popup-design')?api=path.designer:api=path.question;
 
-      postData("https://simple-server-cumz.onrender.com/api/data",
-      //вставить api и переместить ссылку
-       json)
-        .then((result) => {
+      postData(api,json)
+        .then((result:string) => {
           console.log({ result });
           statusImg.setAttribute('src',message.ok)
           textMesage.textContent = message.success;
@@ -79,11 +56,45 @@ const form = () => {
         .finally(() => {
           clearInputs();
           setTimeout(() => {
-            statusMesage.remove();
+            textMesage.remove();
           }, 6000);
         });
     });
   });
+
+  const clearInputs = ():void => {
+    inputs.forEach((input) => {
+     input.value = "";
+    });
 };
+};
+
+  const path:{designer:string,
+              question:string}={
+     designer:'https://simple-server-cumz.onrender.com/api/data',
+     question: 'https://simple-server-cumz.onrender.com/api/data' ,
+    
+   }
+
+  const postData = async  ('https://simple-server-cumz.onrender.com/api/data',  data) => {
+ 
+    console.log(data);
+    const result = await fetch('https://simple-server-cumz.onrender.com/api/data', {
+      method: "POST",
+      headers: {
+        "Content-type": "aplication/json",
+      },
+      body: data,
+    });
+
+    return await result.text();
+    
+    
+  };
+
+
+
+
+ 
 
 export default form;
