@@ -1,57 +1,62 @@
 const form = () => {
-  const forms:NodeListOf<HTMLElement> = document.querySelectorAll("form");
-  const inputs:NodeListOf<HTMLElement> = document.querySelectorAll("input");
+  const forms: NodeListOf<HTMLFormElement> = document.querySelectorAll("form");
+  const inputs: NodeListOf<HTMLInputElement> =
+    document.querySelectorAll("input");
 
-  const message:{loading:string,
-    success:string,
-    failure:string,
-    spiner:string,
-    ok:string,
-    fail:string} = {
+  const message: {
+    loading: string;
+    success: string;
+    failure: string;
+    spinner: string;
+    ok: string;
+    fail: string;
+  } = {
     loading: "Загрузка...",
     success: "Спасибо! Мы скоро с вами свяжемся",
     failure: "Что-то пошло не так...",
-  spiner:'image/unknown-1.png',
-   ok:'image/unknown.jpeg',
-fail:'image/unknown.png'  
+    spinner: "image/unknown-1.png",
+    ok: "image/unknown.jpeg",
+    fail: "image/unknown.png",
   };
 
-  forms.forEach((form)  => {
+  forms.forEach((form) => {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
 
       const statusMesage = document.createElement("div");
       statusMesage.classList.add("status");
-      form.parentNode. appendChild(statusMesage);
+      form.appendChild(statusMesage);
 
-      form.classList.add('animated','fadeOutUp');
-      setTimeout(()=>{
-        form.style.display='none'
-      },400);
+      form.classList.add("animated", "fadeOutUp");
+      setTimeout(() => {
+        form.style.display = "none";
+      }, 400);
 
-      const statusImg=document.createElement('img');
-      statusImg.setAttribute('src',message.spiner);
-      statusImg.classList.add('animated','fadeInUp');
+      const statusImg = document.createElement("img");
+      statusImg.setAttribute("src", message.spinner);
+      statusImg.classList.add("animated", "fadeInUp");
       statusMesage.appendChild(statusImg);
 
-      const textMesage=document.createElement('div');
-      textMesage.textContent=message.loading;
-      statusMesage.appendChild(statusImg)
+      const textMesage = document.createElement("div");
+      textMesage.textContent = message.loading;
+      statusMesage.appendChild(statusImg);
 
       const formData = new FormData(form);
-      let api:string ;
- 
-      form.closest('.popup-design')?api=path.designer:api=path.question;
+      let api: string;
 
-      postData(api,json)
-        .then((result:string) => {
+      form.closest(".popup-design")
+        ? (api = path.designer)
+        : (api = path.question);
+
+      postData(api, json)
+        .then((result: string) => {
           console.log({ result });
-          statusImg.setAttribute('src',message.ok)
+          statusImg.setAttribute("src", message.ok);
           textMesage.textContent = message.success;
         })
-        .catch(() =>  {
-            statusImg.setAttribute('src',message.fail)
-            textMesage.textContent=message.failure
+        .catch(() => {
+          statusImg.setAttribute("src", message.fail);
+          textMesage.textContent = message.failure;
         })
         .finally(() => {
           clearInputs();
@@ -62,39 +67,34 @@ fail:'image/unknown.png'
     });
   });
 
-  const clearInputs = ():void => {
+  const clearInputs = (): void => {
     inputs.forEach((input) => {
-     input.value = "";
+      input.value = "";
     });
+  };
 };
+const path: { designer: string; question: string } = {
+  designer: "https://simple-server-cumz.onrender.com/api/data",
+  question: "https://simple-server-cumz.onrender.com/api/data",
 };
 
-  const path:{designer:string,
-              question:string}={
-     designer:'https://simple-server-cumz.onrender.com/api/data',
-     question: 'https://simple-server-cumz.onrender.com/api/data' ,
-    
-   }
-
-  const postData = async  ('https://simple-server-cumz.onrender.com/api/data',  data) => {
- 
-    console.log(data);
-    const result = await fetch('https://simple-server-cumz.onrender.com/api/data', {
+const postData = async (
+  url: string = "https://simple-server-cumz.onrender.com/api/data",
+  data: string
+) => {
+  console.log(data);
+  const result = await fetch(
+    "https://simple-server-cumz.onrender.com/api/data",
+    {
       method: "POST",
       headers: {
         "Content-type": "aplication/json",
       },
       body: data,
-    });
+    }
+  );
 
-    return await result.text();
-    
-    
-  };
-
-
-
-
- 
+  return await result.text();
+};
 
 export default form;
