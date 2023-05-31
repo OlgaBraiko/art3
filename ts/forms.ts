@@ -48,6 +48,11 @@ const form = () => {
         ? (api = path.designer)
         : (api = path.question);
 
+      const objDataForm = {};
+
+      formData.forEach((value, key) => (objDataForm[key] = value));
+      const json = JSON.stringify(objDataForm);
+
       postData(api, json)
         .then((result: string) => {
           console.log({ result });
@@ -61,8 +66,11 @@ const form = () => {
         .finally(() => {
           clearInputs();
           setTimeout(() => {
-            textMesage.remove();
-          }, 6000);
+            statusMesage.remove();
+            form.style.display = "block";
+            form.classList.remove("fadeOutUp");
+            form.classList.add("fadeInUp");
+          }, 5000);
         });
     });
   });
@@ -88,7 +96,7 @@ const postData = async (
     {
       method: "POST",
       headers: {
-        "Content-type": "aplication/json",
+        "Content-type": "application/json",
       },
       body: data,
     }
