@@ -1,5 +1,6 @@
 import slides from "../../ts/sliders";
 import form from "../../ts/forms";
+
 import modals from "../../ts/modal";
 
 window.addEventListener("DOMContentLoaded", () => {

@@ -42,11 +42,10 @@ const form = () => {
       statusMesage.appendChild(statusImg);
 
       const formData = new FormData(form);
-      let api: string;
 
-      form.closest(".popup-design")
-        ? (api = path.designer)
-        : (api = path.question);
+      const api: string = form.closest(".popup-design")
+        ? path.designer
+        : path.question;
 
       const objDataForm = {};
 
