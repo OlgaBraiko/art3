@@ -23,9 +23,9 @@ const form = () => {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
 
-      const statusMesage = document.createElement("div");
-      statusMesage.classList.add("status");
-      form.appendChild(statusMesage);
+      const statusMessage = document.createElement("div");
+      statusMessage.classList.add("status");
+      form?.appendChild(statusMessage);
 
       form.classList.add("animated", "fadeOutUp");
       setTimeout(() => {
@@ -35,11 +35,11 @@ const form = () => {
       const statusImg = document.createElement("img");
       statusImg.setAttribute("src", message.spinner);
       statusImg.classList.add("animated", "fadeInUp");
-      statusMesage.appendChild(statusImg);
+      statusMessage.appendChild(statusImg);
 
       const textMesage = document.createElement("div");
       textMesage.textContent = message.loading;
-      statusMesage.appendChild(statusImg);
+      statusMessage.appendChild(statusImg);
 
       const formData = new FormData(form);
 
@@ -65,7 +65,7 @@ const form = () => {
         .finally(() => {
           clearInputs();
           setTimeout(() => {
-            statusMesage.remove();
+            statusMessage.remove();
             form.style.display = "block";
             form.classList.remove("fadeOutUp");
             form.classList.add("fadeInUp");
