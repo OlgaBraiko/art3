@@ -2,15 +2,13 @@ import modals from "../../ts/modal";
 
 import slides from "../../ts/sliders";
 
-import modals from "../../ts/modal";
-
 import mask from "../../ts/mask";
 
 import form from "../../ts/forms";
 
-window.addEventListener("DOMContentLoaded", () => {
-  modals();
+import checkTextInputs from "../../ts/checkTextInputs";
 
+window.addEventListener("DOMContentLoaded", () => {
   modals();
 
   slides(
@@ -22,4 +20,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
   form();
   mask('[name="phone"]');
+  checkTextInputs('[name="name"]');
+  checkTextInputs('[name="message"]');
 });

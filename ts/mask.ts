@@ -15,7 +15,7 @@ const mask = (selector: string) => {
   };
 
   const createMask = (e) => {
-    const target = e.target as HTMLElement;
+    const target = e.target as HTMLInputElement;
     let matrix = "+7 (___) ___ __ __";
     let i = 0;
     const def = matrix.replace(/\D/g, "");
@@ -37,7 +37,7 @@ const mask = (selector: string) => {
       if (target.value.length === 2) {
         target.value = "";
       } else {
-        setCursorPosition(target.value.length, this);
+        setCursorPosition(String(target.value.length), this);
       }
     }
   };
