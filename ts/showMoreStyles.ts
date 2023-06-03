@@ -1,13 +1,13 @@
-const showMoreStyles = (trigger, styles) => {
-  const cards = document.querySelectorAll(styles);
-  const btn = document.querySelector(trigger);
+const showMoreStyles = (trigger: any, styles: string) => {
+  const cards: NodeListOf<HTMLElement> = document.querySelectorAll(styles);
+  const btn: HTMLElement = document.querySelector(trigger);
 
-  cards.forEach((card) => {
+  cards.forEach((card: HTMLElement): void => {
     card.classList.add("animated", "fadeInUp");
   });
 
-  btn.addEventListener("click", () => {
-    cards.forEach((card) => {
+  btn.addEventListener("click", (): void => {
+    cards.forEach((card: HTMLElement) => {
       card.classList.add(
         "col-sm-3",
         "col-sm-offset-0",
