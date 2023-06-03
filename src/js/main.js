@@ -6,7 +6,7 @@ import mask from "../../ts/mask";
 
 import form from "../../ts/forms";
 
-import checkTextInputs from "../../ts/checkTextInputs";
+import checkTextInputs from "../../ts/textInputs";
 
 window.addEventListener("DOMContentLoaded", () => {
   modals();

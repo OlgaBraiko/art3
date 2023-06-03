@@ -1,7 +1,5 @@
 const mask = (selector: string) => {
   const setCursorPosition = (pos: string, elem) => {
-    elem.focus();
-
     if (elem.setSelectionRange) {
       elem.setSelectionRange(pos, pos);
     } else if (elem.createTextRange) {

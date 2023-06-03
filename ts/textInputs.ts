@@ -1,7 +1,8 @@
 const checkTextInputs = (selector) => {
-  const textInputs = document.querySelectorAll(selector);
+  const inputs: NodeListOf<HTMLInputElement> =
+    document.querySelectorAll(selector);
 
-  textInputs.forEach((input) => {
+  inputs.forEach((input) => {
     input.addEventListener("keypress", (e) => {
       if (e.key.match(/[^а-яё 0-9]/gi)) {
         e.preventDefault();
