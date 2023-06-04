@@ -1,4 +1,6 @@
+ 
 const mask = (selector: string): void => {
+ 
   const setCursorPosition = (pos: string, elem) => {
     if (elem.setSelectionRange) {
       elem.setSelectionRange(pos, pos);
@@ -23,7 +25,9 @@ const mask = (selector: string): void => {
       val = def;
     }
 
+ 
     target.value = matrix.replace(/./g, (a: string) => {
+ 
       return /[_\d]/.test(a) && i < val.length
         ? val.charAt(i++)
         : i >= val.length
@@ -43,7 +47,9 @@ const mask = (selector: string): void => {
   const inputs: NodeListOf<HTMLInputElement> =
     document.querySelectorAll(selector);
 
+ 
   inputs.forEach((input: HTMLInputElement) => {
+ 
     input.addEventListener("input", createMask);
     input.addEventListener("focus", createMask);
     input.addEventListener("blur", createMask);
