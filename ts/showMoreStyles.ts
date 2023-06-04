@@ -1,6 +1,6 @@
-const showMoreStyles = (trigger: HTMLElement | null, styles: string) => {
+const showMoreStyles = (trigger: string, styles: string) => {
   const cards: NodeListOf<HTMLElement> = document.querySelectorAll(styles);
-  const btn: HTMLElement = document.querySelector(trigger);
+  const btn: HTMLElement | null = document.querySelector(trigger);
   if (!btn) return;
 
   cards.forEach((card: HTMLElement): void => {
