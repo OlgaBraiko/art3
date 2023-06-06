@@ -6,6 +6,8 @@ import form from "../../ts/forms";
 
 import showMoreStyles from "../../ts/showMoreStyles";
 
+import calc from "../../ts/calculator";
+
 window.addEventListener("DOMContentLoaded", () => {
   modals();
 
@@ -20,4 +22,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
   form();
   showMoreStyles(".button-styles", ".styles-2");
+  calc({
+    sizes: "#size",
+    materials: "#material",
+    options: "#options",
+    promocode: ".promocode",
+    result: ".calc-price",
+  });
 });

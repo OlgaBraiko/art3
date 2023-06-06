@@ -1,7 +1,6 @@
-const showMoreStyles = (trigger: string, styles: string) => {
+const showMoreStyles = (trigger: any, styles: string) => {
   const cards: NodeListOf<HTMLElement> = document.querySelectorAll(styles);
-  const btn: HTMLElement | null = document.querySelector(trigger);
-  if (!btn) return;
+  const btn: HTMLElement = document.querySelector(trigger);
 
   cards.forEach((card: HTMLElement): void => {
     card.classList.add("animated", "fadeInUp");
@@ -20,4 +19,5 @@ const showMoreStyles = (trigger: string, styles: string) => {
     btn.style.display = "none";
   });
 };
+
 export default showMoreStyles;
