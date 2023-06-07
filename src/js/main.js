@@ -6,6 +6,8 @@ import form from "../../ts/forms";
 
 import showMoreStyles from "../../ts/showMoreStyles";
 
+import filter from "../../ts/filter";
+
 window.addEventListener("DOMContentLoaded", () => {
   modals();
 
@@ -20,4 +22,5 @@ window.addEventListener("DOMContentLoaded", () => {
 
   form();
   showMoreStyles(".button-styles", ".styles-2");
+  filter();
 });
