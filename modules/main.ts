@@ -5,6 +5,7 @@ import slides from "./sliders";
 import form from "./forms";
 
 import showMoreStyles from "./showMoreStyles";
+import mask from "./mask";
 
 import calc from "./calculator";
 
@@ -22,6 +23,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   form();
   showMoreStyles(".button-styles", ".styles-2");
+  mask(".lllll");
   calc({
     sizes: "#size",
     materials: "#material",
