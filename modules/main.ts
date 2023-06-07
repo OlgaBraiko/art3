@@ -1,12 +1,12 @@
-import modals from "../../ts/modal";
+import modals from "./modal";
 
-import slides from "../../ts/sliders";
+import slides from "./sliders";
 
-import form from "../../ts/forms";
+import form from "./forms";
 
-import showMoreStyles from "../../ts/showMoreStyles";
+import showMoreStyles from "./showMoreStyles";
 
-import calc from "../../ts/calculator";
+import calc from "./calculator";
 
 window.addEventListener("DOMContentLoaded", () => {
   modals();

@@ -12,7 +12,7 @@
 </head>
 
 <body>
-	<script src="./src/js/main.js" defer type="module"></script>
+	<script src="./modules/main.ts" defer type="module"></script>
 	<img class="fixed-gift wow pulse infinite" src=./src/assets/img/gift.png alt>
 	<header class=header>
 		<div class=container>
@@ -246,14 +246,14 @@
 							<input type=file name=upload>
 						</div>
 						<select id=size>
-							<option value="" >Выберите размер картины</option>
+							<option value="0" >Выберите размер картины</option>
 							<option value="500">40x50</option>
 							<option value="1000">50x70</option>
 							<option value="1500">70x70</option>
 							<option value="2000">70x100</option>
 						</select>
 						<select id=material>
-							<option  >Выберите материал картины</option>
+							<option value="0" >Выберите материал картины</option>
 							<option value="2" title="Изящный, позволяет легко создавать текстуру, подходит для декоративных картин маслом.">
 								Холст из волокна</option>
 							<option value="1.9"
