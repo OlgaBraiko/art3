@@ -6,7 +6,7 @@ import form from "./forms";
 
 import showMoreStyles from "./showMoreStyles";
 
-//import calc from "./calculator";
+import calc from "./calculator";
 
 window.addEventListener("DOMContentLoaded", () => {
   modals();
@@ -22,11 +22,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
   form();
   showMoreStyles(".button-styles", ".styles-2");
-  /*calc({
+  calc({
     sizes: "#size",
     materials: "#material",
     options: "#options",
     promocode: ".promocode",
     result: ".calc-price",
-  });*/
+  });
 });
