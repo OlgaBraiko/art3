@@ -54,10 +54,10 @@ const filter = (): void => {
     typeFilter(markGuy);
   });
   btnGrandmother?.addEventListener("click", () => {
-    //typeFilter();
+    typeFilter();
   });
   btnGranddad?.addEventListener("click", () => {
-    //typeFilter() ;
+    typeFilter();
   });
 
   menu?.addEventListener("click", (e) => {

@@ -8,10 +8,9 @@ import showMoreStyles from "./showMoreStyles";
 import mask from "./mask";
 
 import calc from "./calculator";
+import filter from "./filter";
 
 window.addEventListener("DOMContentLoaded", () => {
-  modals();
-
   modals();
 
   slides(
@@ -31,4 +30,5 @@ window.addEventListener("DOMContentLoaded", () => {
     promocode: ".promocode",
     result: ".calc-price",
   });
+  filter();
 });
