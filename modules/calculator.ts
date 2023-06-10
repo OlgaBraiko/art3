@@ -11,10 +11,6 @@ const calc = ({
   const promocodeBlock: HTMLElement = document.querySelector(promocode);
   const resultBlock: HTMLElement = document.querySelector(res);
 
-  console.log(sizeBlock);
-  console.log(materialBlock);
-  console.log(optionsBlock);
-
   let sum: number = 0;
 
   const calcFunc = (): void => {

@@ -1,4 +1,5 @@
 const filter = (): void => {
+ 
   const menu: HTMLElement | null = document.querySelector(".portfolio-menu");
   const items: NodeListOf<HTMLElement> = document.querySelectorAll("li");
   const btnAll: HTMLElement | null = document.querySelector(".all");
@@ -11,6 +12,7 @@ const filter = (): void => {
   const btnGranddad: HTMLElement | null = document.querySelector(".granddad");
   const wrapper: HTMLElement | null =
     document.querySelector("portfolio-wrapper");
+ 
   const markAll: NodeListOf<HTMLElement> = document.querySelectorAll(".all");
   const markGirl: NodeListOf<HTMLElement> = document.querySelectorAll(".girl");
   const markLovers: NodeListOf<HTMLElement> =
@@ -38,6 +40,7 @@ const filter = (): void => {
     }
   };
 
+ 
   btnAll?.addEventListener("click", () => {
     typeFilter(markAll);
   });
@@ -61,6 +64,8 @@ const filter = (): void => {
   });
 
   menu?.addEventListener("click", (e) => {
+ 
+ 
     const target = e.target as HTMLElement;
     if (target && target.tagName === "LI") {
       items.forEach((btn) => btn.classList.remove("active"));
