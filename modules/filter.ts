@@ -36,25 +36,25 @@ const filter = (): void => {
     }
   };
 
-  btnAll.addEventListener("click", () => {
+  btnAll?.addEventListener("click", () => {
     typeFilter(markAll);
   });
-  btnLovers.addEventListener("click", () => {
+  btnLovers?.addEventListener("click", () => {
     typeFilter(markLovers);
   });
-  btnChef.addEventListener("click", () => {
+  btnChef?.addEventListener("click", () => {
     typeFilter(markChef);
   });
-  btnGirl.addEventListener("click", () => {
+  btnGirl?.addEventListener("click", () => {
     typeFilter(markGirl);
   });
-  btnGuy.addEventListener("click", () => {
+  btnGuy?.addEventListener("click", () => {
     typeFilter(markGuy);
   });
-  btnGrandmother.addEventListener("click", () => {
+  btnGrandmother?.addEventListener("click", () => {
     //typeFilter();
   });
-  btnGranddad.addEventListener("click", () => {
+  btnGranddad?.addEventListener("click", () => {
     //typeFilter() ;
   });
 
