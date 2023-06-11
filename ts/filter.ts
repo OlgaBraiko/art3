@@ -1,17 +1,14 @@
 const filter = (): void => {
-  const menu: HTMLElement | null = document.querySelector(".portfolio-menu");
-  const items: NodeListOf<HTMLElement> = document.querySelectorAll("li");
-  const btnAll: HTMLElement | null = document.querySelector(".all");
-  const btnLovers: HTMLElement | null = document.querySelector(".lovers");
-  const btnChef: HTMLElement | null = document.querySelector(".chef");
-  const btnGirl: HTMLElement | null = document.querySelector(".girl");
-  const btnGuy: HTMLElement | null = document.querySelector(".guy");
-  const btnGrandmother: HTMLElement | null =
-    document.querySelector(".grandmother");
-  const btnGranddad: HTMLElement | null = document.querySelector(".granddad");
-  const wrapper: HTMLElement | null =
-    document.querySelector("portfolio-wrapper");
-
+  const menu: HTMLElement = document.querySelector(".portfolio-menu")!;
+  const items: NodeListOf<HTMLElement> = menu.querySelectorAll("li");
+  const btnAll: HTMLElement = menu.querySelector(".all")!;
+  const btnLovers: HTMLElement = menu.querySelector(".lovers")!;
+  const btnChef: HTMLElement = menu.querySelector(".chef")!;
+  const btnGirl: HTMLElement = menu.querySelector(".girl")!;
+  const btnGuy: HTMLElement = menu.querySelector(".guy")!;
+  const btnGrandmother: HTMLElement = menu.querySelector(".grandmother")!;
+  const btnGranddad: HTMLElement = menu.querySelector(".granddad")!;
+  const wrapper: HTMLElement = document.querySelector("portfolio-wrapper")!;
   const markAll: NodeListOf<HTMLElement> = document.querySelectorAll(".all");
   const markGirl: NodeListOf<HTMLElement> = document.querySelectorAll(".girl");
   const markLovers: NodeListOf<HTMLElement> =
@@ -20,7 +17,7 @@ const filter = (): void => {
   const markGuy: NodeListOf<HTMLElement> = document.querySelectorAll(".guy");
   const no: HTMLElement = document.querySelector(".portfolio-no")!;
 
-  const typeFilter = (markType?: NodeListOf<HTMLElement>) => {
+  const typeFilter = (markType: NodeListOf<HTMLElement>) => {
     markAll.forEach((mark) => {
       mark.style.display = "none";
       mark.classList.remove("animated", "fadeIn");
@@ -39,34 +36,29 @@ const filter = (): void => {
     }
   };
 
-  btnAll?.addEventListener("click", () => {
+  btnAll.addEventListener("click", () => {
     typeFilter(markAll);
   });
-  btnLovers?.addEventListener("click", () => {
+  btnLovers.addEventListener("click", () => {
     typeFilter(markLovers);
   });
-  btnChef?.addEventListener("click", () => {
+  btnChef.addEventListener("click", () => {
     typeFilter(markChef);
   });
-  btnGirl?.addEventListener("click", () => {
+  btnGirl.addEventListener("click", () => {
     typeFilter(markGirl);
   });
-  btnGuy?.addEventListener("click", () => {
+  btnGuy.addEventListener("click", () => {
     typeFilter(markGuy);
   });
-  btnGrandmother?.addEventListener("click", () => {
-    typeFilter();
+  btnGrandmother.addEventListener("click", () => {
+    //typeFilter();
   });
-  btnGranddad?.addEventListener("click", () => {
-    typeFilter();
-
-    typeFilter();
-  });
-  btnGranddad?.addEventListener("click", () => {
-    typeFilter();
+  btnGranddad.addEventListener("click", () => {
+    //typeFilter() ;
   });
 
-  menu?.addEventListener("click", (e) => {
+  menu.addEventListener("click", (e) => {
     const target = e.target as HTMLElement;
     if (target && target.tagName === "LI") {
       items.forEach((btn) => btn.classList.remove("active"));
