@@ -20,7 +20,7 @@ const pictureSize = (imgSelector: string) => {
     });
   };
 
-  blocks.forEach((block): void => {
+  blocks?.forEach((block): void => {
     block.addEventListener("mouseover", () => {
       showImg(block);
     });
