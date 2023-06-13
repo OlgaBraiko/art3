@@ -9,7 +9,10 @@ import showMoreStyles from "./showMoreStyles";
 import mask from "./mask";
 
 import calc from "./calculator";
+
 import filter from "./filter";
+
+import pictureSize from "./pictureSize";
 
 window.addEventListener("DOMContentLoaded", () => {
   modals();
@@ -32,4 +35,5 @@ window.addEventListener("DOMContentLoaded", () => {
     result: ".calc-price",
   });
   filter();
+  pictureSize(".sizes-block");
 });
