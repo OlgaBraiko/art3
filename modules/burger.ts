@@ -6,7 +6,7 @@ const burger = (menuSelector, burgerSelector) => {
 
   menuElem.style.display = "none";
 
-  burgerElem?.addEventListener("click", () => {
+  burgerElem?.addEventListener("click", (): void => {
     if (
       String((menuElem.style.display = "none")) &&
       window.screen.availWidth < 993
