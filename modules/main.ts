@@ -14,6 +14,8 @@ import filter from "./filter";
 
 import pictureSize from "./pictureSize";
 
+import burger from "./burger";
+
 window.addEventListener("DOMContentLoaded", () => {
   modals();
 
@@ -36,4 +38,5 @@ window.addEventListener("DOMContentLoaded", () => {
   });
   filter();
   pictureSize(".sizes-block");
+  burger(".burger-menu", ".burger");
 });
