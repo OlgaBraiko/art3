@@ -7,9 +7,10 @@ const burger = (menuSelector, burgerSelector) => {
   menuElem.style.display = "none";
 
   burgerElem?.addEventListener("click", (): void => {
+    const BREAKPOINT: number = 993;
     if (
       String((menuElem.style.display = "none")) &&
-      window.screen.availWidth < 993
+      window.screen.availWidth < BREAKPOINT
     ) {
       menuElem.style.display = "block";
     } else {
