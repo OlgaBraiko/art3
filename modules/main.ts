@@ -14,6 +14,7 @@ import filter from "./filter";
 
 import pictureSize from "./pictureSize";
 
+ 
 window.addEventListener("DOMContentLoaded", () => {
   modals();
 
@@ -36,4 +37,5 @@ window.addEventListener("DOMContentLoaded", () => {
   });
   filter();
   pictureSize(".sizes-block");
+ 
 });
