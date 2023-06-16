@@ -14,8 +14,7 @@ import filter from "./filter";
 
 import pictureSize from "./pictureSize";
 
-import accordion from "./accordion";
-
+ 
 window.addEventListener("DOMContentLoaded", () => {
   modals();
 
@@ -38,5 +37,5 @@ window.addEventListener("DOMContentLoaded", () => {
   });
   filter();
   pictureSize(".sizes-block");
-  accordion(".accordion-heading");
+ 
 });
