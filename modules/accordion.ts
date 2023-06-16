@@ -12,7 +12,9 @@ const accordion = (trrigers: string) => {
       const nextElementSibling: HTMLElement | null =
         target.nextElementSibling as HTMLElement;
       console.log(target, nextElementSibling);
+ 
       if (nextElementSibling?.classList.contains("active-content")) {
+ 
         nextElementSibling.style.maxHeight =
           nextElementSibling?.scrollHeight + 80 + "px";
       } else {
