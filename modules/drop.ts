@@ -1,9 +1,9 @@
 const drop = () => {
-  const fileInputs: NodeListOf<HTMLElement> =
+  const fileInputs: NodeListOf<HTMLInputElement> =
     document.querySelectorAll('[name="upload"');
 
   ["dragenter", "dragleave", "dragover", "drop"].forEach((eventName): void => {
-    fileInputs.forEach((input: HTMLElement) => {
+    fileInputs.forEach((input: HTMLInputElement) => {
       input.addEventListener(eventName, preventDefaults, false);
     });
   });
@@ -15,12 +15,12 @@ const drop = () => {
     e.stopPropagation();
   }
 
-  const highlight = (item): void => {
+  const highlight = (item: any): void => {
     item.closest(".file_upload").style.border = "5px solid grey";
     item.closest(".file_upload").style.backgroundColor = "rgba(0,0,0,0.3)";
   };
 
-  const unhighlight = (item) => {
+  const unhighlight = (item: any) => {
     item.closest(".file_upload").style.border = "none";
 
     if (item.closest(".calc_form")) {
@@ -42,14 +42,21 @@ const drop = () => {
     });
   });
 
-  fileInputs.forEach((input) => {
-    input.addEventListener("drop", (e: DragEvent) => {
-      const inputFile: FileList | undefined = e.dataTransfer?.files;
+  fileInputs.forEach((input: HTMLInputElement): void => {
+    input.addEventListener("drop", (ev) => {
+      const target: HTMLInputElement = ev.target as HTMLInputElement;
 
-      let dots;
-      const arr = input[0].name.split(".");
-      const name = arr[0].substring(0, 6) + dots(".");
-      //input.previousElementSibling.textContent = name;
+      let files: FileList = <FileList>target.files;
+
+      const [fileName, fileExt] = files[0].name.split(".");
+
+      const dots: string = fileName.length > 6 ? "..." : ".";
+
+      const name: string = `${fileName.substring(0, 6)} ${dots} ${fileExt}`;
+
+      (<HTMLElement>input.previousElementSibling).textContent = name;
+
+      files = (<DataTransfer>(<DragEvent>ev).dataTransfer).files;
     });
   });
 };
