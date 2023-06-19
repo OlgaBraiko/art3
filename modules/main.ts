@@ -23,6 +23,9 @@ import accordion from "./accordion";
 import drop from "./drop";
 
  
+import scrolling from "./scroll";
+
+ 
 window.addEventListener("DOMContentLoaded", () => {
   modals();
 
@@ -52,8 +55,6 @@ window.addEventListener("DOMContentLoaded", () => {
   accordion(".accordion-heading");
   drop();
  
- 
-  
- 
+  scrolling(".pageup");
  
 });

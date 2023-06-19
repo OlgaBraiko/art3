@@ -1745,3 +1745,17 @@ h4 {
     width: 25rem;
   }
 }
+
+.pageup {
+  opacity: 0;
+  width: 26px;
+  height: 26px;
+  position: fixed;
+  bottom: 100px;
+  right: 5%;
+  z-index: 30;
+  background-color: rgb(186, 23, 151);
+  cursor: pointer;
+  border: 3px solid black;
+  transition: Is all;
+}
