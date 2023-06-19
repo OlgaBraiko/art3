@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang=ru>
+
+<head>
+	<meta charset=UTF-8>
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>Картины.art - портрет на холсте</title>
+	
+	
+	
+	
+  <script type="module" crossorigin src="/assets/index-95c77f66.js"></script>
+  <link rel="stylesheet" href="/assets/index-3e51ab92.css">
+</head>
+
+<body>
+	
+	<img class="fixed-gift wow pulse infinite" src=data:image/png;base64,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 alt>
+	<header class=header>
+		<div class=container>
+			<div class="col-md-2 col-sm-3 col-xs-6">
+				<button class=burger>
+					<img src=/assets/burger-73156662.svg alt><span>Каталог товаров</span>
+				</button>
+				<ul class=burger-menu>
+					<li>
+						<a href="#">Картина из вашего фото</a>
+					</li>
+					<li>
+						<a href="#">Готовые картины</a>
+					</li>
+					<li>
+						<a href="#">Идеи подарков</a>
+					</li>
+					<li>
+						<a href="#">Покупателям</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-8 hidden-sm hidden-xs">
+				<ul class=header-menu>
+					<li>
+						<a href="#">Картина из вашего фото</a>
+						<ul class="burger-menu header-menu-sub">
+							<li><a href=#styles>Фотомозаика</a></li>
+							<li><a href=#styles>Шарж по фото</a></li>
+							<li><a href=#styles>Love is...</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Готовые картины</a>
+						<ul class="burger-menu header-menu-sub">
+							<li><a href=#portfolio>Портрет</a></li>
+							<li><a href=#portfolio>Живопись</a></li>
+							<li><a href=#portfolio>Коллаж</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Идеи подарков</a>
+						<ul class="burger-menu header-menu-sub">
+							<li><a href=#portfolio>Готовые картины</a></li>
+							<li><a href=#portfolio>Интерьерные постеры</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Покупателям</a>
+						<ul class="burger-menu header-menu-sub">
+							<li><a href=#often-questions>Срочное изготовление</a></li>
+							<li><a href=#often-questions>Доставка и оплата</a></li>
+							<li><a href=#scheme>Схема работы</a></li>
+							<li><a href=#footer>Контакты</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-2 col-md-offset-0 col-sm-3 col-sm-offset-6 col-xs-6">
+				<div class=button-wrap>
+					<button class="button button-order button-design">Заказать<img src=/assets/button-right-arrow-a8d2c12b.svg
+							alt></button>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main class=main>
+		<div class=container>
+			<div class=row>
+				<div class="col-md-3 col-sm-4 col-xs-5">
+					<p class=logo>Картины.art</p>
+					<p class=logo-p>Преврати фотографию в настоящую картину!</p>
+				</div>
+				<div class="col-md-3 col-md-offset-3 col-sm-offset-0 col-sm-4 hidden-xs">
+					<div class=file_upload>
+						<button type=button>Загрузить фотографию</button>
+						<div>Файл не выбран</div>
+						<input type=file name=upload>
+					</div>
+					<p class=email>E-mail: <a href=mailto:info@kartiny.art>info@kartiny.art</a></p>
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-7">
+					<p class=phone>8 800 234-23-34</p>
+					<p class=phone-whatsapp><img class=icons src=/assets/telephone-351b240a.svg alt><img class=icons
+							src=/assets/whatsapp-249e411e.svg alt> +7 495 234-23-34</p>
+				</div>
+			</div>
+			<div class=row>
+				<div class=col-md-7>
+					<div class=main-slider>
+						<div class=main-slider-item>
+							<img src=/assets/main-1-d508b493.png alt>
+						</div>
+						<div class=main-slider-item>
+							<img src=/assets/main-2-5ec606ce.png alt>
+						</div>
+					</div>
+				</div>
+				<div class=col-md-5>
+					<p class=p-heading-italic>Лучший подарок для всех</p>
+					<h1 class="wow fadeInUp">Портрет на холсте</h1>
+					<div class=row>
+						<div class="col-md-6 col-md-offset-0 col-sm-6 col-sm-offset-3">
+							<p class=main-features><img src=/assets/checked-94ffdead.svg alt>Гарантия минимальной цены</p>
+						</div>
+						<div class="col-md-6 col-md-offset-0 col-sm-6 col-sm-offset-3">
+							<p class=main-features><img src=/assets/checked-94ffdead.svg alt>На 30% дешевле конкурентов</p>
+						</div>
+						<div class="col-md-6 col-md-offset-0 col-sm-6 col-sm-offset-3">
+							<p class=main-features><img src=/assets/checked-94ffdead.svg alt>При заказе с сайта скидки до 30%!</p>
+						</div>
+						<div class="col-md-6 col-md-offset-0 col-sm-6 col-sm-offset-3">
+							<p class=main-features><img src=/assets/checked-94ffdead.svg alt>Срочное изготовление за 3 часа!</p>
+						</div>
+					</div>
+					<p class=p-button>Отправьте фото сейчас и получите дизайн через 1 час</p>
+					<button class="button button-order button-design"><img class=button-order-img
+							src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAjCAYAAADxG9hnAAACCUlEQVRYhc2YSyhEURjHr1mNldgoReSxoEikFKZQHllgQRYkslFiY2che8XOgsxCkbHyPEpSZqdQUxZqULIgTZqFyOP6f93vmlNzZ8zLnLv4NdOcc7/zO/d85879jqbrupYMQog5cA6egS7hB6ugEWiRMOMkJcEiHWAAdPL3QTAPvOCDpYJg9L9F/qIJ7LHQNchXJWJSCe5YyKVSxGSXZRpUi2icPySTpVpEY5ELO4h0s0ybahHiBQTsIDLNd6VQtUgBi8ypFiE+gc8OIvQ/9W0HEQ8tjx1E3HYRWbeLyLFdRALgQbVIpjCeIx7VIi4W6VMtss0iTpUiGSzhpTgqRdwsUqJSpMVMUjNOvIOWg3FQl4RItQiVGI6YRdC5BiyDGxEqniYTFOmRYpTSb1FF0CEHzAjjDcq88J4/lxJYGhp0i69/BRVmm6WIMPb1kTT4lTAqNMrwU7ARR47kgn5wKMWj7Zot9/sV4dkPg0vuTC8qC6BIGsy8pWWU5aCKl6yeE4/ax8As2BHhdfAJ9wsTlkWC3PmNAlvM2AGewDtL6jFAsfbBFCiOtmyyyBDwcQCqwrosZNa4fRP0ggmGdtCIMIrwdlAL8mLMG+sc4eV5lGa1QjkjtdPtvU3xIz7yrkFjswhlOPEljGMGOm6gYwZ/WkSkAZy8DAcWOTCfNhGLhG0Fi8I44zhLtcgPWEQ5tBznaQkAAAAASUVORK5CYII= alt>Заказать портрет</button>
+				</div>
+			</div>
+		</div>
+	</main>
+	<section class=promo>
+		<div class=container>
+			<div class=col-md-7>
+				<img class=promo-img src=/assets/promo-1-da75fe26.png alt>
+			</div>
+			<div class=col-md-5>
+				<p>Просто отправьте фото и</p>
+				<h2 class="wow fadeInUp">Мы пришлем вам дизайн бесплатно в течение 1 часа!</h2>
+				<button class="button button-order button-design">Заказать дизайн портрета</button>
+			</div>
+		</div>
+		<img class=palette src=/assets/palette-0f2fbc84.png alt>
+	</section>
+	<section class=styles id=styles>
+		<div class=container>
+			<p class=p-heading>Портрет на холсте</p>
+			<h2>Популярные стили рисунка</h2>
+			<div class=row>
+				<div class="col-sm-3 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+					<div class=styles-block>
+						<img src=/assets/styles-1-65d52c41.jpg alt>
+						<h4>Маслом</h4>
+						<a href="#">Подробнее</a>
+					</div>
+				</div>
+				<div class="col-sm-3 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+					<div class=styles-block>
+						<img src=/assets/styles-2-150c030b.jpg alt>
+						<h4>Акварелью</h4>
+						<a href="#">Подробнее</a>
+					</div>
+				</div>
+				<div class="col-sm-3 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+					<div class=styles-block>
+						<img src=/assets/styles-3-60a0a6fa.jpg alt>
+						<h4>Карандашом</h4>
+						<a href="#">Подробнее</a>
+					</div>
+				</div>
+				<div class="col-sm-3 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+					<div class=styles-block>
+						<img src=/assets/styles-4-af881cb8.jpg alt>
+						<h4>Ручкой</h4>
+						<a href="#">Подробнее</a>
+					</div>
+				</div>
+				<div class="hidden-lg hidden-md hidden-sm hidden-xs styles-2">
+					<div class=styles-block>
+						<img src=/assets/styles-5-11c1d957.jpg alt>
+						<h4>Пастелью</h4>
+						<a href="#">Подробнее</a>
+					</div>
+				</div>
+				<div class="hidden-lg hidden-md hidden-sm hidden-xs styles-2">
+					<div class=styles-block>
+						<img src=/assets/styles-6-771baea6.jpg alt>
+						<h4>Поп-арт</h4>
+						<a href="#">Подробнее</a>
+					</div>
+				</div>
+				<div class="hidden-lg hidden-md hidden-sm hidden-xs styles-2">
+					<div class=styles-block>
+						<img src=/assets/styles-7-82d0d7f9.png alt>
+						<h4>Фотомозаика</h4>
+						<a href="#">Подробнее</a>
+					</div>
+				</div>
+				<div class="hidden-lg hidden-md hidden-sm hidden-xs styles-2">
+					<div class=styles-block>
+						<img src=/assets/styles-8-93e9f6b4.jpg alt>
+						<h4>Шарж</h4>
+						<a href="#">Подробнее</a>
+					</div>
+				</div>
+			</div>
+			<button class="button button-transparent button-styles">Посмотреть больше стилей</button>
+		</div>
+		<img class=paints src=/assets/paints-f1911c5a.png alt>
+	</section>
+	<section class="card card-1 wow fadeIn">
+		<div class=container>
+			<div class=card-block>
+				<div class=row>
+					<div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1">
+						<img src=/assets/card-1-e7ef93de.png alt>
+					</div>
+					<div class="col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1">
+						<div class=card-block-text>
+							<h3>Потрясающий портрет флип-флап в стиле поп арт</h3>
+							<p class=p-heading>Вы подарите яркие эмоции, запомнится надолго!</p>
+							<button class="button button-order button-consultation  wow zoomIn">Подробнее об услуге</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class=calc>
+		<div class=container>
+			<p class=p-heading>Калькулятор</p>
+			<h2>Рассчитайте стоимость и получите скидку 30%</h2>
+			<div class=row>
+				<div class="col-md-4 col-offset-1">
+					<form class=form action=# method=POST enctype=multipart/form-data>
+						<h4>Загрузите свое фото</h4>
+						<div class=file_upload>
+							<button type=button>Загрузить фотографию</button>
+							<div>Файл не выбран</div>
+							<input type=file name=upload>
+						</div>
+						<select id=size>
+							<option>Выберите размер картины</option>
+							<option>40x50</option>
+							<option>50x70</option>
+							<option>70x70</option>
+							<option>70x100</option>
+						</select>
+						<select id=material>
+							<option>Выберите материал картины</option>
+							<option title="Изящный, позволяет легко создавать текстуру, подходит для декоративных картин маслом.">
+								Холст из волокна</option>
+							<option
+								title="Достаточно грубый и создает ощущение реальности, подходит для классических пейзажей, натюрмортов и портретов.">
+								Льняной холст</option>
+							<option title="Изящный, подходит для всех типов реалистичных портретов.">Холст из натурального хлопка
+							</option>
+						</select>
+						<select id=options>
+							<option>Дополнительные услуги</option>
+							<option>Покрытие арт-гелем</option>
+							<option>Экспресс-изготовление</option>
+							<option>Доставка готовых работ </option>
+						</select>
+						<input type="text" class="promocode" placeholder="Введите ваш промокод">
+						<div class=calc-price>Для расчета нужно выбрать размер картины и материал картины</div>
+						<button class="button button-order">Быстрый заказ</button>
+					</form>
+				</div>
+				<div class="col-md-4 col-md-offset-2 hidden-sm hidden-xs">
+					<img src=/assets/calc-1-fefafe37.png alt>
+					<p class=calc-text>Пропорциональный размер изображения рассчитывается автоматически. Если Вы хотите
+						кадрировать изображение или просто узнать стоимость желаемого размера картины, снимите галочку с поля
+						«Пропорциональный»</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class=portfolio id=portfolio>
+		<div class=container>
+			<div class=p-heading>Примеры работ</div>
+			<h2>Для кого делаем портрет?</h2>
+			<ul class=portfolio-menu>
+				<li class="all active">Все работы</li>
+				<li class=lovers>Для влюбленных</li>
+				<li class=chef>Для шефа</li>
+				<li class=girl>Для девушки</li>
+				<li class=guy>Для парня</li>
+				<li class=grandmother>Для бабушки</li>
+				<li class=granddad>Для дедушки</li>
+			</ul>
+		</div>
+		<div class=portfolio-wrapper>
+			<div class="portfolio-block all girl">
+				<img src=/assets/portfolio-1-99bfc836.jpg alt>
+			</div>
+			<div class="portfolio-block all girl">
+				<img src=/assets/portfolio-2-07a656a0.jpg alt>
+			</div>
+			<div class="portfolio-block all lovers">
+				<img src=/assets/portfolio-3-3ee2f61f.jpg alt>
+			</div>
+			<div class="portfolio-block all guy">
+				<img src=/assets/portfolio-4-e9846e2f.jpg alt>
+			</div>
+			<div class="portfolio-block all chef">
+				<img src=/assets/portfolio-5-4e67f4dd.jpg alt>
+			</div>
+			<div class="portfolio-block all lovers">
+				<img src=/assets/portfolio-6-87cb388b.jpg alt>
+			</div>
+			<div class="portfolio-block all lovers">
+				<img src=/assets/portfolio-7-6bd2a116.jpg alt>
+			</div>
+			<div class="portfolio-block all girl">
+				<img src=/assets/portfolio-8-d879fed2.jpg alt>
+			</div>
+			<div class="portfolio-block all girl">
+				<img src=/assets/portfolio-9-dd738d6a.jpg alt>
+			</div>
+			<div class="portfolio-block all chef">
+				<img src=/assets/portfolio-10-0ba9b675.jpg alt>
+			</div>
+		</div>
+		<div class=container>
+			<p class=portfolio-no>Таких портретов мы еще не делали, хотите быть первыми?</p>
+		</div>
+	</section>
+	<section class=gift>
+		<div class=container>
+			<div class=col-md-6>
+				<p class=p-heading>Портрет по фото</p>
+				<h3>Лучший подарок для всех!</h3>
+				<p class=gift-text>Портрет по фотографии изготовляется на высококачественном холсте, поэтому не беспокойтесь за
+					сохранность своего подарка! Такой приятный презент отлично впишется в интерьерю</p>
+				<div class=gift-features>
+					<div class=col-sm-4>
+						<h4 class="wow swing" data-wow-delay="0.2s"><img class=gift-img-1 src=data:image/png;base64,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
+								alt>Подарок со вкусом</h4>
+					</div>
+					<div class=col-sm-4>
+						<h4 class="wow swing" data-wow-delay="0.4s"><img class=gift-img-2 src=data:image/png;base64,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 alt>Всегда
+							будет в тренде</h4>
+					</div>
+					<div class=col-sm-4>
+						<h4 class="wow swing" data-wow-delay="0.6s"><img class=gift-img-3 src=data:image/png;base64,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 alt>Все
+							будут в восторге</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class=features>
+		<div class=container>
+			<p class=p-heading>Наши преимущества</p>
+			<h2>Почему выбирают именно нас?</h2>
+			<div class="col-md-4 col-sm-6 wow rotateIn" data-wow-delay="0.1s">
+				<h4><img class=features-img-1 src=/assets/features-1-2cd42f6b.png alt>Натуральный холст и лучшие краски</h4>
+			</div>
+			<div class="col-md-4 col-sm-6  wow rotateIn" data-wow-delay="0.2s">
+				<h4><img class=features-img-2 src=/assets/features-2-7744bbea.png alt>Гарантия минимальной цены</h4>
+			</div>
+			<div class="col-md-4 col-sm-6  wow rotateIn" data-wow-delay="0.3s">
+				<h4><img class=features-img-3 src=/assets/features-3-2289ea68.png alt>Большой выбор декоративных рамок</h4>
+			</div>
+			<div class="col-md-4 col-sm-6  wow rotateIn" data-wow-delay="0.4s">
+				<h4><img class=features-img-4 src=/assets/features-4-c9b765df.png alt>Рисуют профессиональные художники</h4>
+			</div>
+			<div class="col-md-4 col-sm-6  wow rotateIn" data-wow-delay="0.5s">
+				<h4><img class=features-img-5 src=/assets/features-5-c47d641a.png alt>Защита от старения до 70 лет</h4>
+			</div>
+			<div class="col-md-4 col-sm-6  wow rotateIn" data-wow-delay="0.6s">
+				<h4><img class=features-img-6 src=/assets/features-6-960f70b8.png alt>Доставка в любую точку мира</h4>
+			</div>
+		</div>
+	</section>
+	<section class=sizes>
+		<div class=container>
+			<div class=p-heading>Популярные размеры и цены</div>
+			<h2>Можем изготовить картину любого размера!</h2>
+			<div class="col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
+				<div class=sizes-wrapper>
+					<div class=sizes-block>
+						<img class=size-1 src=/sizes-1-1.png alt>
+						
+						<p class=size>40x50</p>
+					 
+						<p class=starting-price>5 290 руб.</p>
+						<p class=final-price>3 670 руб.</p>
+					</div>
+					<div class=sizes-block>
+						<img class=size-2 src=/sizes-2-1.png alt>
+						<p class=size>50x70</p>
+						<p class=starting-price>5 290 руб.</p>
+						<p class=final-price>3 670 руб.</p>
+					</div>
+					<div class=sizes-block>
+						<img class=size-3 src=/sizes-3-1.png alt>
+						<p class=size>70x70</p>
+						<p class=starting-price>5 290 руб.</p>
+						<p class=final-price>3 670 руб.</p>
+						<p class=sizes-hit>Хит продаж</p>
+					</div>
+					<div class=sizes-block>
+						<img class=size-4 src=/sizes-4-1.png alt>
+						<p class=starting-price>5 290 руб.</p>
+						<p class=final-price>3 670 руб.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class=scheme id=scheme>
+		<div class=container>
+			<p class=p-heading>Как мы будем с вами работать</p>
+			<h2>Процесс изготовления картины</h2>
+			<div class=row>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class=scheme-block>
+						<img src=/assets/scheme-1-b5359c76.png alt>
+						<p>Присылаете фотографию и свои пожелания</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class=scheme-block style="position: relative; top: 1.3rem;">
+						<img src=/assets/scheme-2-2d452834.png alt>
+						<p>Мы готовим варианты дизайна с учётом ваших требований</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class=scheme-block>
+						<img src=/assets/scheme-3-ba680822.png alt>
+						<p>Вы утверждаете макет и художник приступает к работе</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class=scheme-block>
+						<img src=/assets/scheme-4-5312f5db.png alt>
+						<p>Выбираете вариант багетной рамы и оформления</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class=scheme-block>
+						<img src=/assets/scheme-5-ea362041.png alt>
+						<p>Согласовываются адрес и удобное время доставки</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class=scheme-block style="position: relative; top: -1.6rem;">
+						<img src=/assets/scheme-6-9ab92bf4.png alt>
+						<p>Вы платите оставшуюся сумму курьеру при получении картины</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="card card-2 wow fadeIn">
+		<div class=container>
+			<div class=card-block>
+				<div class=row>
+					<div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1">
+						<img src=/assets/card-2-e326dd4d.jpg alt>
+					</div>
+					<div class="col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1">
+						<div class=card-block-text>
+							<h3>Оформление в багетные рамы</h3>
+							<p class=p-heading>Мы можем предложить вам оформление в любую раму из огромного ассортимента по желанию.
+							</p>
+							<button class="button button-order button-consultation wow zoomIn">Подробнее об услуге</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="card card-3 wow fadeIn">
+		<div class=container>
+			<div class=card-block>
+				<div class=row>
+					<div class="col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1">
+						<div class=card-block-text>
+							<h3>Заказать портрет маслом у портретиста</h3>
+							<p class=p-heading>Эксклюзивно, качественно, детальная ручная прорисовка.</p>
+							<button class="button button-order button-consultation zoomIn">Подробнее об услуге</button>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-6">
+						<img src=/assets/card-3-f77553da.png alt>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class=promo-2>
+		<div class=container>
+			<div class=row>
+				<div class=col-md-5>
+					<div class=promo-2-block>
+						<p class=p-heading>Не нашли, что искали?</p>
+						<h2 class="wow fadeInUp">Загрузите наш каталог с 50 вариантами стиля бесплатно!</h2>
+						<button class="button button-order">Загрузить каталог</button>
+					</div>
+				</div>
+				<div class=col-md-7><img src=/assets/promo-2-4b9af5ef.png alt></div>
+			</div>
+		</div>
+	</section>
+	<div class=feedback>
+		<div class=container>
+			<div class=feedback-slider style="position:relative; height: 400px;">
+				<button class="main-slider-btn main-prev-btn">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAA6UlEQVQ4jbXVsQ5EQBAG4FF4PZVK4mE0mnsND6RQbEMvKBARjbkZNytyya29y9wkv2Kz+7F2LQCptm1hWRabkBJTCoqhTBIjbbH0uY6BruvgrHmeARE5EaXB+2qkrx13oFcwoMaHB/RePCY4wSzLIM9z2LbtF+yKvkC+yKM7i26I+767ukQWDPHmna3rilVVYV3XLrRhi8HYByvL8sg4jh/7ssVg4Yv1fe+6N4MFg0YDE9AwOGlgAk5e4DAMX4FeU/ZB7ZS9F+UOtYuivm3UN7b6p2ePH53DIUkSSNMUaFo6x9ffDlitX8ATllqjhSEzbkQAAAAASUVORK5CYII=" alt="left">
+				</button>'
+				<button class="main-slider-btn main-next-btn">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAA5klEQVQ4jbXVPQ5FQBAH8FG866lUEofRaFzDgRSKbegFBSKiMW9mMxER3k48Jvk3m9lfsh8WNE0D0zQd86EElIxiKIPEyFggPba/rmvYigcQcR+fUqG7KumFcRxPQY+SKqBjpQR6Z+AdzNayLGmSJBDH8Qb6V83ruvIEjeuzZQ8AL/aMsbIssSgKnOfZBVZsMRhcdfR9j3me22hQthjMfjW1batG2WLQuNaiRdlicHCBWpQtNdh1nRp0LlmDCWich6LFBMxeuTaPX+zHP72/HweZC0fw9vNF2+FFUQRhGL7wwD79C/gCEwOjhTeP0+MAAAAASUVORK5CYII=" alt="right">
+				</button>
+				<div class=feedback-slider-item>
+					<div class=col-sm-5>
+						<div class=feedback-block>
+							<img src=/assets/feedback-1-653bfc58.png alt>
+							<button class="button button-order button-design">Хочу так же</button>
+						</div>
+					</div>
+					<div class="col-sm-5 col-sm-offset-1">
+						<p class=feedback-heading>«...Получил я именно то, о чем мечтал, причем прямо с доставкой на дом!...»</p>
+						<p class=feedback-text>Я живу в небольшом поселке и для меня заказать портрет было целым подвигом! Пристал
+							наши с супругой фото и попросил сделать несколько макетов на выбор. К моему удивлению, очень скоро мне
+							прислали не просто несколько, а целых 15 разных макетов! Я выбрал самый лучший и оформил заказ.</p>
+						<p class=feedback-signature><span>Олег Петров,</span> д. Месягутово</p>
+					</div>
+				</div>
+				<div class=feedback-slider-item>
+					<div class=col-sm-5>
+						<div class=feedback-block>
+							<img src=/assets/feedback-2-007d1506.jpg alt>
+							<button class="button button-order button-design">Хочу так же</button>
+						</div>
+					</div>
+					<div class="col-sm-5 col-sm-offset-1">
+						<p class=feedback-heading>«...Я в восторге! Не думала, что портрет может быть настолько красивым!...»</p>
+						<p class=feedback-text>Подруге муж подарил портрет, и мне тоже захотелось заказать. Из всех макетов этот
+							сразу запал в душу! И отлично вписывется в интерьер моей гостинной. Теперь он висит тут на почетном месте,
+							и я каждый раз любую им. Всем моим родным тоже очень понравился!</p>
+						<p class=feedback-signature><span>Ирина Антонова,</span> г. Кисловодск</p>
+					</div>
+				</div>
+				<div class=feedback-slider-item>
+					<div class=col-sm-5>
+						<div class=feedback-block>
+							<img src=/assets/feedback-3-40ed8bb2.jpg alt>
+							<button class="button button-order button-design">Хочу так же</button>
+						</div>
+					</div>
+					<div class="col-sm-5 col-sm-offset-1">
+						<p class=feedback-heading>«...Неожиданный подарок на день рождения от друзей...»</p>
+						<p class=feedback-text>Хочу поделиться впечатлениями от полученного вчера подарка. Классная работа,
+							выполненная, натуральными красками! Я как человек педантичный, люблю мелочи, для меня они очень важны, и
+							здесь они прикольно сделаны – часы нарисовали, свитерок мой любимый, маечка с резиночкой. Очень позитивный
+							шарж, сделанный по моей фотографии.</p>
+						<p class=feedback-signature><span>Нарек Маргарян,</span> г. Великие Луки</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section class=often-questions id=often-questions>
+		<div class=container>
+			<img class=spirt src=/assets/spirt-2eb71e07.png alt>
+			<p class=p-heading>Часто задаваемые вопросы</p>
+			<h2>Ответим на любой из ваших вопросов</h2>
+			<div id=accordion>
+				<p class="accordion-heading col-md-8 col-md-offset-2"><span>Сколько времени нужно для изготовления
+						заказа?</span></p>
+				<div class="col-md-8 col-md-offset-2 accordion-block">
+					<p>
+						Время выполнения заказа зависит от трех факторов: сложности картины, стиля написания и размера. Среднее
+						время выполнения заказа составляет 7 дней без учета времени на доставку. В ряде случаев по желанию заказчика
+						можно уменьшить срок до 5 дней.<br><br>Примечание: Если Вы решите что-то изменить в картине, внести
+						коррективы - это может занять дополнительное время, которое не учитывается при оговоренном сроке выполнения.
+					</p>
+				</div>
+				<p class="accordion-heading col-md-8 col-md-offset-2"><span>Смогу ли я увидеть картину до ее получения?</span>
+				</p>
+				<div class="col-md-8 col-md-offset-2 accordion-block">
+					<p>
+						Да. По готовности, мы отправляем по электронной почте цифровое фото Вашей картины, для того, чтобы Вы
+						смогли, при необходимости внести свои корректировки и пожелания, если таковые будут. Вы также сможете
+						увидеть картину "вживую" в нашем салоне. Сообщите об этом Вашему менеджеру.
+					</p>
+				</div>
+				<p class="accordion-heading col-md-8 col-md-offset-2"><span>Какого формата должны быть фотографии</span></p>
+				<div class="col-md-8 col-md-offset-2 accordion-block">
+					<p>
+						Мы работаем со всеми известными форматами изображений! Через сайт вы можете загрузить JPEG, TIFF, PNG
+						размером до 50 мегабайт. Вы должны обладать авторскими правами или иметь разрешение на использование
+						изображения. Если у Вас другой формат изображения (RAW, PDF), то вы можете воспользоваться FTP загрузчиком.
+						Если вы хотите сделать фото из бумажной фотографии (не цифровой), пришлите его нам, мы отсканируем,
+						обработаем и вернем фото вместе с вашим заказом!
+					</p>
+				</div>
+				<p class="accordion-heading col-md-8 col-md-offset-2"><span>Могу ли я дать особые указания художнику</span></p>
+				<div class="col-md-8 col-md-offset-2 accordion-block">
+					<p>
+						Когда вы размещаете свой заказ на сайте, вы можете добавить свои комментарии в специальном текстовом поле.
+						Вы также можете: объединить объекты с разных фото в одно или удалить объекты с фото, можете поменять задний
+						фон, поменять одежду, наряды, сделать цветную картину с черно-белого фото, а также заказать картину с
+						поврежденного или старого фото.
+					</p>
+				</div>
+			</div>
+			<img class=brushes src=/assets/brushes-97173d6e.png alt>
+		</div>
+	</section>
+	<section class="promo promo-3">
+		<div class=container>
+			<div class=row>
+				<div class=col-md-7>
+					<img class=promo-img src=/assets/promo-3-05800a09.png alt>
+				</div>
+				<div class=col-md-5>
+					<p>Просто отправьте фото и</p>
+					<h2 class="wow fadeInUp">Мы пришлем вам дизайн бесплатно в течение 1 часа!</h2>
+					<button class="button button-order button-design">Заказать дизайн портрета</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class=consultation>
+		<div class=container>
+			<p class=p-heading>Остались вопросы?</p>
+			<h2>Получите консультацию художника!</h2>
+			<div class="col-md-10 col-md-offset-1">
+				<form action=# method=POST>
+					<div class=input-wrapper>
+						<input type=text name=name placeholder="Ваше имя" required>
+						<input type=text name=phone placeholder="Ваш телефон" required>
+						<input type=text name=email placeholder="Ваш E-mail">
+						<input class=input-text name=message type=text placeholder="Задайте ваш вопрос здесь" required>
+					</div>
+					<button class="button button-order">Получить консультацию</button>
+				</form>
+			</div>
+		</div>
+	</section>
+	<footer class=footer id=footer>
+		<div class=container>
+			<div class="col-md-8 hidden-sm hidden-xs">
+				<table>
+					<tr>
+						<th colspan=2>Портрет на холсте</th>
+						<th>Идеи подарков</th>
+						<th>Покупателям</th>
+					</tr>
+					<tr>
+						<td>Поп-арт</td>
+						<td>Фотомозаика</td>
+						<td>Готовые картины</td>
+						<td>Срочное изготовление</td>
+					</tr>
+					<tr>
+						<td>Живопись</td>
+						<td>Портрет маслом</td>
+						<td>Интерьерные постеры</td>
+						<td>Доставка и оплата</td>
+					</tr>
+					<tr>
+						<td>Коллаж</td>
+						<td>Шарж по фото</td>
+						<td></td>
+						<td>Схема работы</td>
+					</tr>
+					<tr>
+						<td>Портрет в образе</td>
+						<td>Love is...</td>
+						<td></td>
+						<td>Контакты</td>
+					</tr>
+				</table>
+			</div>
+			<div class="col-md-3 col-md-offset-1 col-sm-12">
+				<div class="col-md-12 col-sm-4 col-xs-12">
+					<p class=phone>8 800 234-23-34</p>
+				</div>
+				<div class="col-md-12 col-sm-4 col-xs-12">
+					<p class=phone-whatsapp>+7 495 234-23-34</p>
+				</div>
+				<div class="col-md-12 col-sm-4 col-xs-12">
+					<p>Круглосуточно, без выходных</p>
+				</div>
+				<div class=col-md-12>
+					<p>E-mail: <a href=mailto:info@kartiny.art>info@kartiny.art</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class=popup-consultation data-modal>
+		<div class=popup-dialog>
+			<div class=popup-content>
+				<button class=popup-close>&times;</button>
+				<h4>Остались вопросы? Закажите обратный звонок</h4>
+				<div class=main-form>
+					<form class=form action=# method=POST>
+						<input type=text name=name placeholder="Ваше имя" required>
+						<input type=text name=phone placeholder="Ваш телефон" required>
+						<button class="button button-order">Получить консультацию</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="popup-gift" data-modal>
+		<div class=popup-dialog>
+			<div class=popup-content>
+				<button class=popup-close>&times;</button>
+				<h2>У нас для вас есть подарок!</h2>
+				<img src="data:image/png;base64,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" alt="">
+				<p>Введите промо-код IWANTPOPART и получите скидку 30% на портрет любого размера в стиле pop-art!</p>
+			</div>
+		</div>
+	</div>
+	<div class=popup-design data-modal>
+		<div class=popup-dialog>
+			<div class=popup-content>
+				<button class=popup-close>&times;</button>
+				<form action=# enctype=multipart/form-data>
+					<h4>Заказать дизайн портрета</h4>
+					<div class=file_upload>
+						<button type=button>Загрузить фотографию</button>
+						<div>Файл не выбран</div>
+						<input type=file name=upload>
+					</div>
+					<div class=main-form>
+						<div class=form>
+							<input type=text name=name placeholder="Ваше имя" required>
+							<input type=text name=phone placeholder="Ваш телефон" required>
+							<input type=text name=email placeholder="Ваш e-mail">
+							<textarea name=message placeholder=Комментарий rows=2></textarea>
+							<button class="button button-order">Отправить дизайнеру</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
