@@ -14,12 +14,15 @@ import filter from "./filter";
 
 import pictureSize from "./pictureSize";
 
+ 
 import burger from "./burger";
+ 
 
 import accordion from "./accordion";
 
 import drop from "./drop";
 
+ 
 window.addEventListener("DOMContentLoaded", () => {
   modals();
 
@@ -42,9 +45,15 @@ window.addEventListener("DOMContentLoaded", () => {
   });
   filter();
   pictureSize(".sizes-block");
+ 
 
   burger(".burger-menu", ".burger");
 
   accordion(".accordion-heading");
   drop();
+ 
+ 
+  
+ 
+ 
 });
