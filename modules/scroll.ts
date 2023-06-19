@@ -16,17 +16,19 @@ const scrolling = (upSelector) => {
 
   const calcScroll = () => {
     upElem.addEventListener("click", (e: Event): void => {
-      const target: any = e.target as HTMLElement;
+      const target: HTMLAnchorElement = e.target as HTMLAnchorElement;
       let scrollTop = Math.round(body.scrollTop || element.scrollTop);
 
       if (target.hash !== "") {
         e.preventDefault();
-        let hashElem: any = document.querySelector(target.hash);
+        let hashElem: HTMLAnchorElement | null = document.querySelector(
+          target.hash
+        );
         let hashElemTop = 0;
 
         while (hashElem?.offsetParent) {
           hashElemTop += hashElem.offsetTop;
-          hashElem = hashElem.offsetParent;
+          hashElem = hashElem.offsetParent as HTMLAnchorElement;
         }
 
         hashElemTop = Math.round(hashElemTop);
