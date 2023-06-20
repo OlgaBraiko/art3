@@ -1,3 +1,5 @@
+import { postData } from "../services/db";
+
 const form = () => {
   const forms: NodeListOf<HTMLFormElement> = document.querySelectorAll("form");
   const inputs: NodeListOf<HTMLInputElement> =
@@ -83,25 +85,6 @@ const form = () => {
 const path: { designer: string; question: string } = {
   designer: "https://simple-server-cumz.onrender.com/api/data",
   question: "https://simple-server-cumz.onrender.com/api/data",
-};
-
-const postData = async (
-  url: string = "https://simple-server-cumz.onrender.com/api/data",
-  data: string
-) => {
-  console.log(data);
-  const result = await fetch(
-    "https://simple-server-cumz.onrender.com/api/data",
-    {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: data,
-    }
-  );
-
-  return await result.text();
 };
 
 export default form;

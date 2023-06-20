@@ -20,6 +20,8 @@ import accordion from "./accordion";
 
 import drop from "./drop";
 
+import scrolling from "./scroll";
+
 window.addEventListener("DOMContentLoaded", () => {
   modals();
 
@@ -31,7 +33,7 @@ window.addEventListener("DOMContentLoaded", () => {
   );
 
   form();
-  showMoreStyles(".button-styles", ".styles-2");
+  showMoreStyles(".button-styles", ".#styles .row");
   mask('[name="phone"]');
   calc({
     sizes: "#size",
@@ -47,4 +49,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
   accordion(".accordion-heading");
   drop();
+
+  scrolling(".pageup");
 });
